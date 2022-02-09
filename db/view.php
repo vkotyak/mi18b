@@ -36,6 +36,18 @@ Array
         return $html;
     }
 
+    public function showForm() {
+        $html ='
+            <form action="" method="post">
+            <input type="text" id="sname" name="sname">
+            <input type="text" id="ssurname" name="ssurname">
+            <input type="text" id="ssecname" name="ssecname">
+            <input type="hidden" name="task" value="addstudent">
+            <input type="submit" value="send">
+            </form>';
+        return $html;
+    }
+
     public function showPage($content) {
         $html ='<html><head><title>oop example</title></head><body>';
         $html .= $content;

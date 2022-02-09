@@ -26,6 +26,12 @@ class Model {
         }
     }
 
+    public function addStudent($arr) {
+        $q = " INSERT INTO `students` (`id`, `name`, `surname`, `secondname`) VALUES (NULL, '".$arr['name']."', '".$arr['surname']."', '".$arr['secondname']."'); ";
+//        echo $q;
+        return $this->db->query($q);
+    }
+
     function __destruct() {
         if ($this->isconnected==1) {
             $this->db->close();
